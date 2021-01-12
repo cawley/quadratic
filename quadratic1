@@ -1,0 +1,28 @@
+import java.util.Scanner;
+class QuadraticEquations2 {
+  public static double getRoots(int a, int b, int c){  
+    double a2 = (-b - Math.sqrt((b * b) - (4.0 * a * c))) / (2.0 * a);
+      return a2;
+    }
+  public static double getRoots1(int a, int b, int c){
+      double a1 = (-b + Math.sqrt((b * b) - (4.0 * a * c))) / (2.0 * a); 
+      return a1;
+    }
+  public static void main(String[] args) {
+    do{
+    Scanner s = new Scanner(System.in);
+    System.out.println("Enter the a value");
+    int a = s.nextInt();
+    System.out.println("Enter the b value");
+    int b = s.nextInt();
+    System.out.println("Enter the c value");
+    int c = s.nextInt();
+    
+    double e = getRoots1(a, b, c);
+    System.out.println("One root to the equation is " + e);
+    double d = getRoots(a, b, c);
+    System.out.println("Another root to the equation is " + d);
+    s.close();
+  }while(1 == 1);
+  }
+}
